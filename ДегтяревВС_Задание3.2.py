@@ -7,16 +7,13 @@
 * По желанию доработайте программу: запросите у пользователя его имя (или идентификатор), в соответствии с этим выведите содержание
  всех корзин этого пользователя в отформатированном для чтения виде в консоль. Используйте API https://fakestoreapi.com/docs. 
 '''
-import requests, pprint, datetime
+import requests, datetime
 
-#Запрос и вывод информации о всех корзинах пользователей (Cart)
+#Запрос информации о всех корзинах пользователей (Cart)
 url = 'https://fakestoreapi.com/carts'
 responseCart = requests.get(url).json()
-print('На сайте "https://fakestoreapi.com" имеются следующие корзины пользователей:')
-pprint.pprint(responseCart)
 
 #Дополнительное задание - показать корзины выбранного пользователя
-
 #Запрашиваем всех пользователей сайта
 url = 'https://fakestoreapi.com/users'
 responseUsers = requests.get(url).json()
